@@ -1,3 +1,5 @@
+//Quiz Data object
+
 const quizData = [
     {
       question: 'Which Twitter user is the Twitter boss, now?',
@@ -45,3 +47,15 @@ const quizData = [
       correct: 'e',
     },
 ]
+
+//DOM elements declarations
+
+const quiz = document.getElementById('quiz');
+const answerEls = document.querySelectorAll('.answer');
+const questionEl = document.getElementById('question');
+const a_text = document.getElementById('a_text');
+const b_text = document.getElementById('b_text');
+const c_text = document.getElementById('c_text');
+const d_text = document.getElementById('d_text');
+const e_text = document.getElementById('e_text');
+const submitBtn = document.getElementById('submit');
