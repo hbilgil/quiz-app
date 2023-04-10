@@ -68,7 +68,7 @@ let score = 0;
 //A function to deselect answer at checked radio button
 
 const deselectAnswers = () => {
-    answerEls.forEach((answerEl) => (answerEl.checked = false)) // deselecting radio buttons which were check at the previous question
+    answerEls.forEach((answerEl) => (answerEl.checked = false))// deselecting radio buttons which were check at the previous question
 }
 
 //A function to load questions and answers
@@ -84,9 +84,26 @@ const loadQuiz = () => {
     c_text.innerText = currentQuizData.c //loading answer C
     d_text.innerText = currentQuizData.d //loading answer D
     e_text.innerText = currentQuizData.e //loading answer E
+
+    submitBtn.innerText = 'Choose';
+    submitBtn.style.backgroundColor = "#a8c82f";
 }
 
 loadQuiz();
+
+//A function to return selected id of answer
+
+const selectAnswer = () => {
+    let answer;
+  
+    answerEls.forEach((answerEl) => {
+      if (answerEl.checked) {
+        answer = answerEl.id;
+      }
+    })
+    
+    return answer;
+}
 
 //Event Listeners
 
@@ -104,8 +121,16 @@ submitBtn.addEventListener('click', () => {
       } else {
         quiz.innerHTML = `
         <h2> Quiz is finished, Your score is: ${score * 20} points 🥳 </h2>
-        <button class="submit" onClick="location.reload()"> Try Again 🌀  </button>
+        <button class="submit" onClick="location.reload()"> Please, Try Again 🌀  </button>
       `
+        quiz.style.textAlign= "center";
       }
     }
-})
+});
+
+answerEls.forEach((answerEl) =>  {
+    answerEl.addEventListener('click', () => {
+        submitBtn.innerText = "Yes, I'm sure 👍";
+        submitBtn.style.backgroundColor = "#f87da9";
+    })
+});
