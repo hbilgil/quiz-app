@@ -13,12 +13,13 @@ body {
     font-family: 'Sniglet', cursive;
     background: url(assets/background.png);
     background-repeat: no-repeat;
+    background-position-y: center;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
     height: 100vh;
-    margin: 0;
+    padding-right: 100px;
     overflow: hidden;
 }
 
@@ -26,8 +27,9 @@ body {
 
 h1 {
     font-family: 'Rammetto One', cursive;
-    padding-right: 100px;
-    margin-top: 150px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    color: crimson;
 }
 
 /*Main sec styles*/
@@ -37,7 +39,6 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
     width: 600px;
-    margin-bottom: 20rem;
 }
 
 .quiz-header {
