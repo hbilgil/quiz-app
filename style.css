@@ -108,3 +108,28 @@ ul li label {
 [type='radio']:checked + label:after {
   opacity: 1;
 }
+
+
+/*submit button*/
+
+.submit {
+    border: none;
+    background-color: #a8c82f;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: block;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    padding: 1rem;
+    cursor: pointer;
+}
+  
+.submit:focus:after {
+    content: "Yes, I'm sure 👍";
+}
+  
+.submit:focus {
+    outline: none;
+    background-color: #f87da9;
+}
