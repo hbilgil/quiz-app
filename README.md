@@ -19,10 +19,10 @@ The main goal of this project is to make a Quiz App using a predetermined questi
 
 ## Project Reviews
 
-### Desktop (>1145px)
+### Desktop (>1350px)
 
+![](assets/Desktop.gif)
 
-### Tablets (>863px)
+### Tablets & Mobile (< 1350px)
 
-
-### Mobile (<864px)
+![](assets/Tablet%26Mobile.gif)
