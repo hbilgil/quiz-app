@@ -114,7 +114,7 @@ ul li label {
 
 .submit {
     border: none;
-    background-color: #a8c82f;
+    background-color:#ddd;
     font-family: inherit;
     font-weight: bold;
     font-size: 1.5rem;
@@ -123,13 +123,4 @@ ul li label {
     border-radius: 0 0 10px 10px;
     padding: 1rem;
     cursor: pointer;
-}
-  
-.submit:focus:after {
-    content: "Yes, I'm sure 👍";
-}
-  
-.submit:focus {
-    outline: none;
-    background-color: #f87da9;
 }
