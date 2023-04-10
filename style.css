@@ -48,4 +48,18 @@ h2 {
     font-family: 'Baloo Bhaina 2', cursive;
     padding: 0 1rem;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+ul li {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+  
+ul li label {
+    cursor: pointer;
+}
   
