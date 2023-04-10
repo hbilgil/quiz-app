@@ -2,7 +2,7 @@
 
 const quizData = [
     {
-      question: 'Which Twitter user is the Twitter boss, now?',
+      question: "Which Twitter user is the Twitter's boss?",
       a: 'Elon Musk',
       b: 'Donald Trump',
       c: 'Vladimir Putin',
@@ -65,6 +65,14 @@ const submitBtn = document.getElementById('submit');
 let currentQuiz = 0;
 let score = 0;
 
+//A function to deselect answer at checked radio button
+
+const deselectAnswers = () => {
+    answerEls.forEach((answerEl) => (answerEl.checked = false)) // deselecting radio buttons which were check at the previous question
+}
+
+//A function to load questions and answers
+
 const loadQuiz = () => {
     const currentQuizData = quizData[currentQuiz] //ordered array of quiz questions
   
@@ -79,3 +87,25 @@ const loadQuiz = () => {
 }
 
 loadQuiz();
+
+//Event Listeners
+
+submitBtn.addEventListener('click', () => {
+    const answer = selectAnswer(); //answer is decided by a function
+  
+    if (answer) {
+      if (answer === quizData[currentQuiz].correct) {
+        score++
+      }
+      currentQuiz++
+
+      if (currentQuiz < quizData.length) {
+        loadQuiz(); 
+      } else {
+        quiz.innerHTML = `
+        <h2> Quiz is finished, Your score is: ${score * 20} points 🥳 </h2>
+        <button class="submit" onClick="location.reload()"> Try Again 🌀  </button>
+      `
+      }
+    }
+})
