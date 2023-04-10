@@ -39,3 +39,7 @@ h1 {
     width: 600px;
     margin-bottom: 20rem;
 }
+
+.quiz-header {
+    padding: 4rem;
+}
