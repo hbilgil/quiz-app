@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&family=Rammetto+One&family=Sniglet&display=swap');
 
+
+/* General styling rules*/
+
 * {
     margin: 0;
     padding: 0;
@@ -12,9 +15,17 @@ body {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-start;
     height: 100vh;
     margin: 0;
     overflow: hidden;
+}
+
+/*Header styles*/
+
+h1 {
+    font-family: 'Rammetto One', cursive;
+    padding-right: 100px;
+    margin-top: 150px;
 }
