@@ -64,3 +64,18 @@ const submitBtn = document.getElementById('submit');
 
 let currentQuiz = 0;
 let score = 0;
+
+const loadQuiz = () => {
+    const currentQuizData = quizData[currentQuiz] //ordered array of quiz questions
+  
+    deselectAnswers() // clear off radio button selections before next question
+  
+    questionEl.innerText = currentQuizData.question // loading question
+    a_text.innerText = currentQuizData.a //loading answer A
+    b_text.innerText = currentQuizData.b //loading answer B
+    c_text.innerText = currentQuizData.c //loading answer C
+    d_text.innerText = currentQuizData.d //loading answer D
+    e_text.innerText = currentQuizData.e //loading answer E
+}
+
+loadQuiz();
