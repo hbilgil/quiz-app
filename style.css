@@ -62,4 +62,49 @@ ul li {
 ul li label {
     cursor: pointer;
 }
-  
+
+[type='radio']:checked,
+[type='radio']:not(:checked) {
+  display: none;
+}
+
+[type='radio']:checked + label,
+[type='radio']:not(:checked) + label {
+  position: relative;
+  padding-left: 1.8rem;
+  cursor: pointer;
+}
+
+[type='radio']:checked + label:before,
+[type='radio']:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #ddd;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+[type='radio']:checked + label:after,
+[type='radio']:not(:checked) + label:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #7d8df8;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+}
+
+[type='radio']:not(:checked) + label:after {
+  opacity: 0;
+}
+
+[type='radio']:checked + label:after {
+  opacity: 1;
+}
