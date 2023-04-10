@@ -59,3 +59,8 @@ const c_text = document.getElementById('c_text');
 const d_text = document.getElementById('d_text');
 const e_text = document.getElementById('e_text');
 const submitBtn = document.getElementById('submit');
+
+//variables declarations
+
+let currentQuiz = 0;
+let score = 0;
